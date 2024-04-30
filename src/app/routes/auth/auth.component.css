@@ -1,0 +1,59 @@
+.auth-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.auth-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.left {
+    flex: 1;
+    
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #0C111D;
+    flex: 1;
+}
+
+.title {
+    margin: 20px;
+    color: white;
+    align-self: flex-start;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+
+.cat-emoji {
+    font-size: 19px;
+}
+
+.plus {
+    color: #528BFF;
+}
+
+.router-outlet-container {
+    align-self: center;
+}
+
+
+.footer {
+    align-self: flex-start;
+    color: #DFD3F9;
+    font-size: 11px;
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .left {
+        display: none;
+    }
+}
