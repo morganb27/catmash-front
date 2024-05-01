@@ -32,7 +32,7 @@ export class SignUpComponent implements OnInit {
       this.authService.register(firstname, lastname, email, password).subscribe({
         next: (response) => {
           console.log("register successful", response);
-          this.router.navigate(['/algorithms'])
+          this.router.navigate(['/vote'])
         }
       })
       
