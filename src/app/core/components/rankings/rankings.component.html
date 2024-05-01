@@ -1,1 +1,5 @@
-<p>rankings works!</p>
+<div>Cat Gallery</div>
+<div *ngFor="let cat of cats" class="cat-container">
+    <p>{{ cat.name }}</p>
+    <img [src]="cat.imageURL" alt="Picture of {{ cat.name }}" style="width: 50px;">
+</div>
