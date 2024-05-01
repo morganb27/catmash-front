@@ -15,7 +15,7 @@ export class VoteComponent implements OnInit{
 
   ngOnInit(): void {
       this.catService.getCats().subscribe({
-        next: (cats: Cat) => {
+        next: (cats: Cat[]) => {
           console.log("list of cats", cats);
         }
       })
