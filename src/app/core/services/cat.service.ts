@@ -10,6 +10,6 @@ export class CatService {
   constructor(private http: HttpClient) { }
 
   getCats() {
-    return this.http.get<Cat>("https://spring-boot-catmash.fly.dev/auth/authenticate")
+    return this.http.get<Cat>("https://spring-boot-catmash.fly.dev/cats")
   }
 }
