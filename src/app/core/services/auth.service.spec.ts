@@ -48,4 +48,33 @@ describe('AuthService', () => {
       expect(httpClientSpy.post.calls.mostRecent().args[1]).toEqual({ email: 'test@example.com', password: '12345' })
     })
   })
+  describe('When register method is called', () => {
+    let expectedResponse = { token: '123456' };
+
+    beforeEach(() => {
+      httpClientSpy.post.and.returnValue(of(expectedResponse));
+    })
+
+    it('should return a token', () => {
+      service.register('Thomas', 'Devaux', 'test@example.com', '12345').subscribe(response => {
+        expect(response).toEqual(expectedResponse);
+      });
+    })
+    it('should call HttpClient.post with the correct URL', () => {
+      service.register('Thomas','Devaux', 'test@example.com', '12345').subscribe();
+      expect(httpClientSpy.post.calls.mostRecent().args[0]).toBe('https://spring-boot-catmash.fly.dev/auth/register');
+    });
+    it('should call HttpClient.post with correct body', () => {
+      service.register('Thomas','Devaux', 'test@example.com', '12345').subscribe();
+      expect(httpClientSpy.post.calls.mostRecent().args[1]).toEqual({
+        firstname: 'Thomas', 
+        lastname: 'Devaux', 
+        email: 'test@example.com', 
+        password: '12345'
+      });
+    });
+    
+  })
+
+
 });

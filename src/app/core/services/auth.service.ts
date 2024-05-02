@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginRequest } from '../models/loginRequest';
-import { RegisterRequest } from '../models/registerRequest';
 import { Observable } from 'rxjs';
 import { LoginResponse } from '../models/loginResponse';
+import { RegisterResponse } from '../models/registerResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +15,7 @@ export class AuthService {
     return this.http.post<LoginResponse>("https://spring-boot-catmash.fly.dev/auth/authenticate", { email, password });
   }
 
-  register(firstname: string, lastname: string, email: string, password: string) {
-    return this.http.post<RegisterRequest>("https://spring-boot-catmash.fly.dev/auth/register", { firstname, lastname, email, password }); 
+  register(firstname: string, lastname: string, email: string, password: string) : Observable<RegisterResponse> {
+    return this.http.post<RegisterResponse>("https://spring-boot-catmash.fly.dev/auth/register", { firstname, lastname, email, password }); 
   }
 }
