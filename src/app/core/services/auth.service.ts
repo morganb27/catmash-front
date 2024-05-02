@@ -18,4 +18,9 @@ export class AuthService {
   register(firstname: string, lastname: string, email: string, password: string) : Observable<RegisterResponse> {
     return this.http.post<RegisterResponse>("https://spring-boot-catmash.fly.dev/auth/register", { firstname, lastname, email, password }); 
   }
+
+  isAuthenticated(): boolean {
+    const token = localStorage.getItem('token');
+    return !!token;
+  }
 }

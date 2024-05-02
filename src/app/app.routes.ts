@@ -4,6 +4,7 @@ import { SignInComponent } from './core/components/sign-in/sign-in.component';
 import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 import { VoteComponent } from './core/components/vote/vote.component';
 import { RankingsComponent } from './core/components/rankings/rankings.component';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
 
@@ -19,7 +20,7 @@ export const routes: Routes = [
         ],
     },
 
-    { path: 'vote', component: VoteComponent},
+    { path: 'vote', component: VoteComponent, canActivate: [authGuard] },
 
-    { path: 'rankings', component: RankingsComponent}
+    { path: 'rankings', component: RankingsComponent, canActivate: [authGuard]}
 ];

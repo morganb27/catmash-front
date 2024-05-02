@@ -29,6 +29,7 @@ export class SignInComponent {
     this.authService.login(email, password).subscribe({
       next: (response: any) => {
         console.log('Login successful!', response);
+        localStorage.setItem('token', response.token);
         this.router.navigate(['/vote'])
       }
     })
