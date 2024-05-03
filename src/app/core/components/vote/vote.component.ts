@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CatService } from '../../services/cat.service';
 import { Cat } from '../../models/cat';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-vote',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './vote.component.html',
   styleUrl: './vote.component.css'
 })
 export class VoteComponent implements OnInit{
+  cats: Cat[] = [];
+  displayedCats: Cat[] = [];
 
   constructor(private catService: CatService) {}
 
@@ -17,8 +20,26 @@ export class VoteComponent implements OnInit{
       this.catService.getCats().subscribe({
         next: (cats: Cat[]) => {
           console.log("list of cats", cats);
+          this.cats = cats;
+          this.shuffleCats();
         }
       })
   }
+
+  shuffleCats(): void {
+    this.displayedCats = this.getRandomCats();
+  }
+
+  getRandomCats(): Cat[] {
+    let shuffled = this.cats.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 2);
+  }
+
+  voteForCat(catId: number): void {
+    console.log('Voted for cat:', catId);
+    //(Note to myself) Here, I need to handle sending the vote to my Spring Boot back end
+    this.shuffleCats();  
+  }
+
 
 }
