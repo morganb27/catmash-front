@@ -1,5 +1,23 @@
-<div>Cat Gallery</div>
-<div *ngFor="let cat of cats" class="cat-container">
-    <p>{{ cat.name }}</p>
-    <img [src]="cat.imageURL" alt="Picture of {{ cat.name }}" style="width: 50px;">
+<div class="main-container">
+    <div class="left">
+        <div class="number-one">
+            <img src="./assets/images/number-one.png" alt="Colorful number one">
+        </div>
+        <div class="title">Le roi des moustachus</div>
+        <div class="subtitle">"Soyez prêts à couronner le plus</div>
+        <div class="subtitle">majestueux des félins !"</div>
+        <div class="winner-cat-container">
+            <img [src]="cats[20].imageURL" alt="Cat ranked number one">
+        </div>
+        <div class="cat-name">{{ cats[0].name }}</div>
+        <div><span class="hugs">Câlins: </span>{{ cats[0].votes }}</div>
+    </div>
+    <div class="right">
+        <div class="overall-ranking">
+            Classement général
+        </div>
+        <div class="cat">
+            Cat placeholder
+        </div>
+    </div>
 </div>

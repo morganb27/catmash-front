@@ -1,5 +1,69 @@
-.cat-container {
-    border: 1px solid black;
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-family: 'Courier prime', sans-serif;
+    color: #121212;
+    padding: 0 100px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.number-one img {
+    width: 70px;
+    height: auto;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+
+.winner-cat-container {
+    background-color: #FFFFFF;
     padding: 20px;
-    margin: 10px;
+    width: 250px; 
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid black;
+    box-shadow: 10px 15px 0px #000
+    
+}
+
+.winner-cat-container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.cat-name {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.hugs {
+    color: #505050;
+}
+
+
+.right {
+    height: 300px;
+    background-color: #FFFFFF;
+    border: 1px solid #121212;
+}
+
+.overall-ranking {
+    border: 1px solid black;
 }
