@@ -5,6 +5,7 @@ import { SignUpComponent } from './core/components/sign-up/sign-up.component';
 import { VoteComponent } from './core/components/vote/vote.component';
 import { RankingsComponent } from './core/components/rankings/rankings.component';
 import { authGuard } from './core/guards/auth.guard';
+import { AuthenticatedLayoutComponent } from './core/components/authenticated-layout/authenticated-layout.component';
 
 export const routes: Routes = [
 
@@ -20,7 +21,17 @@ export const routes: Routes = [
         ],
     },
 
-    { path: 'vote', component: VoteComponent, canActivate: [authGuard] },
-
-    { path: 'rankings', component: RankingsComponent, canActivate: [authGuard]}
+    {
+        path: '',
+        component: AuthenticatedLayoutComponent,
+        canActivate: [authGuard],
+        children: [
+            { path: 'vote', component: VoteComponent },
+            { path: 'rankings', component: RankingsComponent },
+        ]
+    },
+    { 
+        path: '**', 
+        redirectTo: 'vote' 
+    },
 ];
