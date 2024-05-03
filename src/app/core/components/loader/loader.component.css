@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FFFFFF; 
+  background-image: linear-gradient(to bottom right, #FCEED5, #FFE7BA);
 }
 
 .favicon {
@@ -17,5 +17,7 @@
 
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+  50% { opacity: 1;
+    transform: scale(1.5);
+   }
 }
