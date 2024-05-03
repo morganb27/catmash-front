@@ -1,11 +1,10 @@
 .sign-in-container {
-    color: #DFD3F9;
+    color: #121212;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
 }
 
 .title {
-    color: #FFFFFF;
     font-weight: 500;
     font-size: 24px;
 }
@@ -30,12 +29,12 @@
 .sign-in-container input[type="email"],
 .sign-in-container input[type="password"] {
     height: 30px; 
-    background-color: #0C111D; 
+    background-color: #FFFFFF; 
     border-radius: 5px; 
     border: 1px solid #333740; 
     padding: 0 10px;
     margin: 5px 0px 20px 0px; 
-    color: #DFD3F9;
+    color: #121212;
 }
 
 .sign-in-container input[type="password"] {
@@ -47,9 +46,10 @@
     margin-top: -5px;
     margin-top: 10px;
     margin-bottom: 20px;
-    color: #528BFF;
+    color: #121212;
     font-size: 11px;
-    cursor: pointer;
+    cursor: not-allowed;
+    font-weight: 700;
 }
 
 
@@ -72,14 +72,14 @@
 
 .sign-in-button {
     color: #FFFFFF;
-    background-color: #155EEF;
+    background-color: #121212;
     border: none;
 }
 
 .google-button {
     display: flex;
-    background-color: #0C111D;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #505050;
     border: 1px solid #D0D5DD;
     align-items: center;
     justify-content: center;
@@ -94,11 +94,13 @@
 .sign-up-container {
     font-size: 11px;
     text-align: center;
+    color: #505050;
 }
 
 .sign-up {
-    color: #528BFF;
+    color: #121212;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .sign-in-form-error {
