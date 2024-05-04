@@ -43,5 +43,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 | Color          | Hex                                                                |
 | -------------- | ------------------------------------------------------------------ |
-| Navy           | ![#0C111D](https://via.placeholder.com/10/0a192f?text=+) `#0C111D` |
+| Yellow         | ![#FFE7BA](https://via.placeholder.com/10/0a192f?text=+) `#FFE7BA` |
+| Light Yellow   | ![#FCEED5](https://via.placeholder.com/10/0a192f?text=+) `#FCEED5` |
 
