@@ -6,7 +6,7 @@
             <img [src]="cats[0].imageURL" alt="Image of a cat" (click)="voteForCat(cats[0].id)">
         </div>
         <div class="middle">ou</div>
-        <div class="cat-box-right right">
+        <div class="cat-box-right right" *ngIf="cats.length > 0">
             <img [src]="cats[1].imageURL" alt="Image of a cat" (click)="voteForCat(cats[1].id)">
         </div>
     </div>

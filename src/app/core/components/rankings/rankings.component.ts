@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CatService } from '../../services/cat.service';
 import { Cat } from '../../models/cat';
 import { CommonModule } from '@angular/common';
+import { ThreeDEffectDirective } from '../../directives/three-d-effect.directive';
 
 @Component({
   selector: 'app-rankings',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ThreeDEffectDirective],
   templateUrl: './rankings.component.html',
   styleUrl: './rankings.component.css'
 })
