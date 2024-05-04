@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Courier prime', sans-serif;
+    font-size: 18px;
 }
 
 .left {
@@ -18,6 +19,7 @@
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
+    text-transform: uppercase;
 }
 
 .end-title {
@@ -35,10 +37,19 @@
     height: 100%; 
     display: flex;
     align-items: center; 
+    justify-content: center;
     padding: 0 35px; 
     border-left: 1px solid #121212;
     cursor: pointer;
+    gap: 7px;
 }
+
+.vote img, .ranking img {
+    width: 25px;
+    height: auto;
+}
+
+
 
 .log-out {
     display: flex;
@@ -51,4 +62,8 @@
 
 .vote:hover, .ranking:hover, .vote.active, .ranking.active {
     background-color: #FFE7BA;
+}
+
+.vote.active, .ranking.active {
+    font-weight: 600;
 }
