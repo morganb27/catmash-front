@@ -4,7 +4,7 @@
     font-family: 'Courier prime', sans-serif;
     align-items: center;
     color: #121212;
-    padding: 45px 15px;
+    padding: 40px 15px;
 }
 
 .title {
@@ -42,7 +42,7 @@
   .cat-box-left, .cat-box-right {
     width: 400px; 
     height: 450px;
-    overflow: hidden; 
+   
   }
   
   .cat-box-left img, .cat-box-right img {
@@ -50,8 +50,14 @@
     height: 100%;
     object-fit: cover;
     border: 1px solid #121212;
-    cursor: url("/./assets/images/hand-hover.png"), pointer;
   }
+
+  .cat-box-left, .cat-box-right {
+    cursor: url("/./assets/images/hand-hover.png") 50 0, auto;
+    padding: 0;
+    margin: 0;
+  }
+
 
   .cat-box-left img {
     animation: slideInLeft 0.7s ease-out forwards;
@@ -91,5 +97,33 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .vote-container {
+        padding: 30px 15px;
+    }
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .cat-container {
+        flex-direction: column;
+    }
+
+    .cat-box-left, .cat-box-right {
+        width: 350px; 
+        height: 220px;
+       
+    }
+
+    .middle {
+        padding: 10px;
+        font-size: 12px;
     }
 }

@@ -67,3 +67,44 @@
 .vote.active, .ranking.active {
     font-weight: 600;
 }
+
+@media (max-width: 768px) {
+    .app-header {
+        height: 60px;
+    }
+
+    .left {
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+
+    .vote, .ranking, .log-out {
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 490px) { 
+    .app-header {
+        height: 50px; 
+        font-size: 16px; 
+    }
+
+    .left {
+        margin-left: 15px;
+        margin-top: 15px;
+        font-size: 16px; 
+    }
+
+    .right {
+        padding-left: 10px;
+    }
+
+    .vote, .ranking, .log-out {
+        padding: 0 10px; 
+        font-size: 14px; 
+    }
+
+    .vote img, .ranking img {
+        width: 20px; 
+    }
+}
