@@ -1,6 +1,6 @@
 .main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     font-family: 'Courier prime', sans-serif;
@@ -60,11 +60,39 @@
 
 
 .right {
-    height: 300px;
-    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 72px);
     border: 1px solid #121212;
+    align-self: flex-start;
+    margin-top: 70px;
+    overflow: hidden;
+
 }
 
 .overall-ranking {
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #121212;;
+}
+
+.block-stairs {
+    width: 25px;
+    height: auto;
+}
+
+.overall-ranking-text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.scrollable-cats {
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    flex-grow: 1; 
 }

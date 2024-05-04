@@ -37,7 +37,11 @@ export class VoteComponent implements OnInit{
 
   voteForCat(catId: number): void {
     console.log('Voted for cat:', catId);
-    //(Note to myself) Here, I need to handle sending the vote to my Spring Boot back end
+    this.catService.incrementVote(catId).subscribe({
+      next: (updatedCat) => {
+        console.log("Vote incremented for cat:", updatedCat);
+      }, error: (error) => console.error('Error incrementing vote:', error)
+    })
     this.shuffleCats();  
   }
 

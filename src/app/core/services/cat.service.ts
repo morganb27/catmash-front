@@ -12,4 +12,9 @@ export class CatService {
   getCats() {
     return this.http.get<Cat[]>("https://spring-boot-catmash.fly.dev/cats")
   }
+
+  incrementVote(catId: number) {
+    return this.http.patch<Cat>(`https://spring-boot-catmash.fly.dev/cats/${catId}/vote`, {});
+  }
+
 }

@@ -1,0 +1,13 @@
+<div class="cat-card-container">
+    <div class="left" [ngClass]="{'first-three-cats': ranking <= 3}">
+        {{ ranking }}
+    </div>
+    <div class="middle">
+        <img src="{{ imageURL }}" alt="Image of a cat in the overall ranking">
+    </div>
+    <div class="right">
+        <div class="cat-name">{{ name }}</div>
+        <div class="vote"><span class="hugs">Câlins:</span> {{ vote }}</div>
+    </div>
+
+</div>

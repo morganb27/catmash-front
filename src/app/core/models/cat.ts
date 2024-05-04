@@ -1,6 +1,6 @@
 export interface Cat {
     id: number,
-    name: String,
-    imageURL: String,
+    name: string,
+    imageURL: string,
     votes: number
 }

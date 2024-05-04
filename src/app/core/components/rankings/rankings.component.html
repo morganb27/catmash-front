@@ -7,17 +7,18 @@
         <div class="subtitle">"Soyez prêts à couronner le plus</div>
         <div class="subtitle">majestueux des félins !"</div>
         <div class="winner-cat-container" appThreeDEffect *ngIf="cats.length > 0">
-            <img [src]="cats[20].imageURL" alt="Cat ranked number one">
+            <img [src]="cats[0].imageURL" alt="Cat ranked number one">
         </div>
         <div class="cat-name" *ngIf="cats.length > 0">{{ cats[0].name }}</div>
         <div *ngIf="cats.length > 0"><span class="hugs">Câlins: </span>{{ cats[0].votes }}</div>
     </div>
     <div class="right">
         <div class="overall-ranking">
-            Classement général
+            <img src="./assets/images/block-stairs-retro.png" alt="Block stairs with retro vibe" class="block-stairs">
+            <div class="overall-ranking-text">Classement général</div>
         </div>
-        <div class="cat">
-            Cat placeholder
+        <div class="scrollable-cats">
+            <app-cat-card *ngFor="let cat of cats" [name]="cat.name" [vote]="cat.votes" [ranking]="cats.indexOf(cat) + 1" [imageURL]="cat.imageURL"></app-cat-card>
         </div>
     </div>
 </div>
