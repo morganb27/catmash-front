@@ -5,24 +5,24 @@
             <p class="subtitle">Rejoignez-nous et découvrez notre application</p>
             <div class="name-container">
                 <div class="first-name-container">
-                    <label for="first-name">Prénom *</label>
+                    <label for="first-name" class="label">Prénom</label>
                     <input type="text" id="first-name" placeholder="Votre prénom" formControlName="firstname">
                 </div>
                 <div class="last-name-container">
-                    <label for="last-name">Nom *</label>
+                    <label for="last-name" class="label">Nom</label>
                     <input type="text" id="last-name" placeholder="Votre nom" formControlName="lastname">
                 </div>
             </div>
             <div class="email-container">
-                <label for="email">Email *</label>
+                <label for="email" class="label">Email</label>
                 <input type="email" id="email" placeholder="Email" formControlName="email">
             </div>
             <div class="password-container">
-                <label for="password">Mot de passe *</label>
+                <label for="password" class="label">Mot de passe</label>
                 <input type="password" placeholder="●●●●●●●●" formControlName="password">
             </div>
             <button type="submit" class="sign-up-button">Créer mon compte</button>
-            <p class="sign-in-container">Vous avez déjà un compte ? <span class="sign-in" [routerLink]="['/auth/sign-in']">Connectez-vous</span></p>
+            <p class="sign-in-container">Vous avez déjà un compte ? <span class="sign-in" [routerLink]="['/auth/sign-in']">Connectez-vous !</span></p>
         </form>
     </div>
 </div>

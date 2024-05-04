@@ -1,12 +1,16 @@
 .sign-up-container {
     color: #121212;
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.sign-up-content {
+    padding: 0px 10px;
 }
 
 .title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .subtitle {
@@ -22,37 +26,37 @@
 .first-name-container {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
 }
 
 .last-name-container {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
 }
 
 .email-container {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
 }
 
 .password-container {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
+}
+
+.label {
+    font-size: 14px;
 }
 
 .sign-up-container input[type="text"],
 .sign-up-container input[type="email"],
 .sign-up-container input[type="password"] {
-    height: 30px; 
+    height: 30px;
     background-color: #FFFFFF; 
-    border-radius: 5px; 
     border: 1px solid #333740; 
-    padding: 0 10px;
+    padding: 5px 15px;
     margin: 5px 0px 20px 0px; 
     color: #121212;
+    font-size: 16px;
 }
 
 .sign-up-container input[type="password"] {
@@ -60,14 +64,15 @@
 }
 
 .sign-up-button {
-    height: 35px;
-    border-radius: 5px;
     cursor: pointer;
     color: #FFFFFF;
     background-color: #121212;
     border: none;
     width: 100%;
     margin-top: 20px;
+    height: 40px;
+    padding: 5px 0px;
+    margin-bottom: 20px;
 }
 
 .sign-in-container {
