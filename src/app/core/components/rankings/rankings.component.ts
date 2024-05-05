@@ -43,5 +43,4 @@ export class RankingsComponent implements OnInit {
       this.animationItem.play();
     }
   }
-
 }
