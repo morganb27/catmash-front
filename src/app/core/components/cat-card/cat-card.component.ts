@@ -14,4 +14,8 @@ export class CatCardComponent {
   @Input() ranking: number = 0;
   @Input() imageURL: string = '';
 
+  formatRanking(ranking: number): string {
+    return ranking < 10 ? `0${ranking}` : `${ranking}`;
+  }
+
 }

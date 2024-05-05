@@ -5,12 +5,25 @@
         </div>
         <div class="title">Le roi des moustachus</div>
         <div class="subtitle">"Soyez prêts à couronner le plus</div>
-        <div class="subtitle">majestueux des félins !"</div>
-        <div class="winner-cat-container" appThreeDEffect *ngIf="cats.length > 0">
-            <img [src]="cats[0].imageURL" alt="Cat ranked number one">
-        </div>
+        <div class="subtitle-two">majestueux des félins !"</div>
+        <ng-lottie [options]="options" 
+            [ngStyle]="{
+                width: '300px',
+                height: '300px',
+                position: 'absolute',
+                top: '-10%',
+                left: '10%',
+            }">>
+        </ng-lottie>
+        <div class="container-with-star">
+            <div class="winner-cat-container" appThreeDEffect *ngIf="cats.length > 0">
+                <img [src]="cats[0].imageURL" alt="Cat ranked number one">
+            </div>
+            <img src="./assets/images/star-two.png" alt="Star Image" class="star-image-two">
+            <img src="./assets/images/star-one.png" alt="Star Image" class="star-image-one">
+        </div>        
         <div class="cat-name" *ngIf="cats.length > 0">{{ cats[0].name }}</div>
-        <div *ngIf="cats.length > 0"><span class="hugs">Câlins: </span>{{ cats[0].votes }}</div>
+        <div *ngIf="cats.length > 0" class="hugs-container"><span class="hugs">Câlins: </span>{{ cats[0].votes }}</div>
     </div>
     <div class="right">
         <div class="overall-ranking">
