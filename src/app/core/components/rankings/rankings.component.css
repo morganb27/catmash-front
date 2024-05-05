@@ -36,7 +36,7 @@
 .winner-cat-container {
     background-color: #FFFFFF;
     padding: 20px;
-    padding-bottom: 15px;
+    
     width: 250px; 
     height: 250px;
     overflow: hidden;
@@ -183,5 +183,28 @@
 
     .subtitle, .subtitle-two {
         font-size: 13px;
+    }
+
+    .winner-cat-container {
+        width: 225px;
+        height: 225px;
+    }
+
+    .winner-cat-container img {
+        width: 225px;
+        height: 225px;
+    }
+    
+
+    .star-image-two {
+        position: absolute;  
+        top: 5%;  
+        left: -65px;  
+    }
+    
+    .star-image-one {
+        position: absolute;
+        bottom: 5%;
+        right: -60px;
     }
 }
