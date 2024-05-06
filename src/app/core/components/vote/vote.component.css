@@ -53,9 +53,10 @@
   }
 
   .cat-box-left, .cat-box-right {
-    cursor: url("/./assets/images/hand-hover.png") 50 0, auto;
+    cursor: url("/./assets/images/hand-hover.png") 50 60, auto;
     padding: 0;
     margin: 0;
+    overflow: visible;
   }
 
 
