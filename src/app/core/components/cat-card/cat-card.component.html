@@ -3,7 +3,7 @@
         {{ ranking | formatRanking }}
     </div>
     <div class="middle">
-        <img src="{{ imageURL }}" alt="Image of a cat in the overall ranking">
+        <img [src]="imageURL" alt="Image of a cat in the overall ranking">
     </div>
     <div class="right">
         <div class="cat-name">{{ name }}</div>
