@@ -1,6 +1,6 @@
 <div class="cat-card-container">
     <div class="left" [ngClass]="{'first-three-cats': ranking <= 3}">
-        {{ formatRanking(ranking) }}
+        {{ ranking | formatRanking }}
     </div>
     <div class="middle">
         <img src="{{ imageURL }}" alt="Image of a cat in the overall ranking">
